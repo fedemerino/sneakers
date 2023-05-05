@@ -18,10 +18,155 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.searchbar {
+  background-color: rgb(var(--background-end-rgb));
+  color: rgb(var(--foreground-rgb));
+  width: 600px;
+  height: 45px;
+}
+
+.searchIcon {
+  position: relative;
+  left: -5%;
+  top: 30%;
+}
+
+.about {
+  max-width: 40%;
+}
+
+.about>p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.mainAbout {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.termsList {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "A1 A1 A2"
+    "A1 A1 A2"
+    "A1 A1 A3"
+    "A1 A1 A3";
+  max-width: 100%;
+  min-height: 90vh;
+}
+
+.A1 {
+  position: relative;
+  grid-area: A1;
+  background-color: #7928ca;
+}
+
+.A1>a>img {
+  height: 700px;
+  width: 700px;
+}
+
+
+.A2 {
+  position: relative;
+  grid-area: A2;
+  background-color: white;
+}
+
+.A3 {
+  position: relative;
+  grid-area: A3;
+  background-color: #ff0080;
+}
+
+.productName {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.productPrice {
+  display: inline-block;
+  padding: .5rem 1rem 1rem 1rem;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.mainAll {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.productCard {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  background-color: #111;
+  align-items: end;
+}
+
+.productCard>a>img {
+  padding-bottom: 10px;
+  height: 150px;
+  width: 250px;
+}
+
+.productSection {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cardImg {
+  padding-bottom: 10px;
+}
+
+.cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  height: 100%;
+  width: 25%;
+  z-index: 3;
+  border-left: 1px solid white;
+}
+
+.productCardName,
+.productCardPrice {
+  padding: 5px;
+  font-weight: 500;
+}
+
+.productCardPrice {
+  display: inline-block;
+}
+
+.productCard:hover {
+  &>a>img {
+    transition: all 0.5s ease;
+    transform: translateY(-10px);
+  }
+}
+
+.productSingleCardContainer{
+  margin-top: 5rem;
+}
+
+.productSingleCard{
+  content: '';
 }
